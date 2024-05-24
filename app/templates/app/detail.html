@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ object.title }}</title>
+    <style>
+        img {
+        width: 200;
+        height: 200;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>{{ object.title }}</h2>
+    <p>{{ object.descripshon }}</p>
+    <img  src="{{ object.image.url }}">
+    <p>Date: {{ object.date }}</p>
+    {% if object.video %}
+        <video width="450" height="300" controls>
+            <source src="{{ object.video.url }}" type="video/mp4">
+        </video>
+    {% endif %}
+</body>
+</html>
